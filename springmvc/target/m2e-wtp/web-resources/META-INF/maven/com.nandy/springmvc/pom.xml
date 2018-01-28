@@ -95,10 +95,9 @@
 				<configuration>
 					<path>/${project.build.finalName}</path>
 					<update>true</update>
-					
 					<url>http://ec2-18-220-115-6.us-east-2.compute.amazonaws.com:8080/manager/text</url>
-					<username>tomcat</username>
-					<password>tomcat</password>
+					<username>techrefresh</username>
+					<password>techrefresh</password>
 				</configuration>
 			</plugin>
 
