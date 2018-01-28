@@ -12,8 +12,8 @@
     </bean>
     <bean id="datasource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
         <property name="driverClassName" value="com.mysql.jdbc.Driver" />
-        <property name="url" value="jdbc:mysql://localhost:3306/techdemo" />
-        <property name="username" value="pani" />
-        <property name="password" value="admin" />
+        <property name="url" value="jdbc:mysql://techrefesh.cxgbttnkndhd.us-east-2.rds.amazonaws.com:3306/techrefresh" />
+        <property name="username" value="admin" />
+        <property name="password" value="password" />
     </bean>
 </beans>
