@@ -65,6 +65,7 @@
 			<groupId>javax.servlet</groupId>
 			<artifactId>javax.servlet-api</artifactId>
 			<version>${servlet.version}</version>
+			<scope>provided</scope>
 		</dependency>
 		<!-- MySQL database driver -->
 		<dependency>
@@ -86,5 +87,21 @@
 
 	<build>
 		<finalName>SpringMVCDemo</finalName>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.tomcat.maven</groupId>
+				<artifactId>tomcat7-maven-plugin</artifactId>
+				<version>2.2</version>
+				<configuration>
+					<path>/${project.build.finalName}</path>
+					<update>true</update>
+					
+					<url>http://ec2-18-220-115-6.us-east-2.compute.amazonaws.com:8080/manager/text</url>
+					<username>tomcat</username>
+					<password>tomcat</password>
+				</configuration>
+			</plugin>
+
+		</plugins>
 	</build>
 </project>
