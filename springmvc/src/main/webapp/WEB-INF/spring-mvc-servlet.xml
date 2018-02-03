@@ -12,10 +12,19 @@
     <bean id="namedParameterJdbcTemplate" class="org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate">
     	<constructor-arg ref="datasource"/>
     </bean>
-    <bean id="datasource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+
+     <bean id="datasource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="com.mysql.jdbc.Driver" />
+        <property name="url" value="jdbc:mysql://aat324tpiy5qfj.craqp0bc9h7i.us-east-2.rds.amazonaws.com:3306/ebdb" />
+        <property name="username" value="admin" />
+        <property name="password" value="techrefresh" />
+    </bean>
+
+<!--     <bean id="datasource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
         <property name="driverClassName" value="com.mysql.jdbc.Driver" />
         <property name="url" value="jdbc:mysql://localhost:3306/techdemo" />
         <property name="username" value="pani" />
         <property name="password" value="admin" />
-    </bean>
+    </bean> -->
+
 </beans>
